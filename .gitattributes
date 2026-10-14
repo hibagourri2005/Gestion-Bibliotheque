@@ -1,0 +1,10 @@
+# Fins de ligne uniformes (LF) pour le texte
+* text=auto eol=lf
+
+# Fichiers binaires
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.webp binary
+*.avif binary
+*.mp4  binary

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraintes et Règles de Gestion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../assets/img/img2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: auto;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        .section-title {
+            color: #333;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .list-title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contraintes et Règles de Gestion</h1>
+        <div>
+            <h2 class="section-title">Utilisateur :</h2>
+            <ul>
+                <li>Les utilisateurs occasionnels peuvent emprunter 1 document pour 15 jours max.</li>
+                <li>Les abonnés peuvent emprunter 4 documents max. pour 1 mois.</li>
+                <li>Les abonnés privilégiés peuvent emprunter 8 documents max. pour 1 mois.</li>
+                <li>Un utilisateur ne peut pas emprunter si un emprunt est en retard ou après 3 relances non honorées.</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="section-title">Exemplaire :</h2>
+            <ul>
+                <li>Un exemplaire est toujours dans un des statuts suivants : en_rayon, en_pret, en_retard, en_reserve, en_travaux.</li>
+                <li>Les exemplaires en réserve ou en travaux ne peuvent pas être empruntés.</li>
+                <li>Un exemplaire endommagé doit être envoyé en travaux ou détruit.</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="section-title">Emprunt :</h2>
+            <ul>
+                <li>Si un emprunt dépasse la date de retour prévue, il passe au statut en_retard.</li>
+                <li>Un utilisateur ne peut pas effectuer de nouvel emprunt tant qu'il a au moins un exemplaire en statut en_retard.</li>
+                <li>Un emprunt peut être prolongé par un bibliothécaire principal, à condition qu'il n'ait pas encore atteint le statut en_retard.</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="section-title">Relance :</h2>
+            <ul>
+                <li>Une relance est envoyée automatiquement si un emprunt est en statut en_retard.</li>
+                <li>Les relances sont espacées d'une semaine.</li>
+                <li>Après 3 relances non honorées, le directeur de la bibliothèque est informé pour prendre des mesures.</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="section-title">Bibliothécaire :</h2>
+            <ul>
+                <li>Les stagiaires peuvent uniquement :</li>
+                <ul>
+                    <li>Enregistrer un emprunt.</li>
+                    <li>Enregistrer un retour.</li>
+                </ul>
+                <li>Les bibliothécaires principaux peuvent, en plus :</li>
+                <ul>
+                    <li>Prolonger un emprunt.</li>
+                    <li>Suspendre temporairement un utilisateur (statut : suspendu.)</li>
+                </ul>
+                <li>Les stagiaires ont une durée limitée (représentée par l'attribut date_fin.)</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="section-title">Document et Exemplaire :</h2>
+            <ul>
+                <li>Chaque Document a au moins un Exemplaire en statut en_reserve.</li>
+                <li>Les Documents endommagés doivent être notifiés pour être :</li>
+                <ul>
+                    <li>Envoyés en travaux.</li>
+                    <li>Ou détruits.</li>
+                </ul>
+            </ul>
+        </div>
+        <div>
+            <h2 class="section-title">Amendes :</h2>
+            <ul>
+                <li>Si l'état d'un exemplaire diminue de plus de 3 niveaux après un emprunt (par exemple, de neuf à usagé), une amende forfaitaire est calculée en fonction de la valeur du document.</li>
+                <li>Les utilisateurs doivent régler leurs amendes pour pouvoir à nouveau emprunter.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

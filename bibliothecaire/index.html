@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Actions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('../assets/img/img9.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .button-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Cadre transparent */
+            border: 2px solid rgba(204, 204, 204, 0.5); /* Bordure transparente */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+            gap: 10px; /* Espace entre les boutons */
+        }
+
+        .green-button {
+            color: white;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px; /* Taille de police augmentée */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 250px; /* Largeur augmentée */
+            height: 60px; /* Hauteur augmentée */
+            line-height: 60px; /* Aligner le texte verticalement */
+            background-color: #4CAF50; /* Vert */
+        }
+
+        .green-button:hover {
+            background-color: #45a049; /* Vert foncé */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        
+        <div>
+            <a href="utilisateurs/index.html" class="green-button">Gestion des Utilisateurs</a>
+        </div>
+        <div>
+            <a href="editeurs/lister-editeurs.php" class="green-button">Gestion des Editeurs</a>
+        </div>
+        <div>
+            <a href="documents/index.html" class="green-button">Gestion des Documents</a>
+
+        </div>
+        <div>
+            <a href="livres-periodiques/livres.php" class="green-button"> Livres</a>
+        </div><div>
+            <a href="livres-periodiques/periodiques.php" class="green-button"> Périodiques</a>
+        </div>
+        <div>
+            <a href="exemplaires/index.html" class="green-button">Gestion des Exemplaires</a>
+        </div>
+        <div>
+            <a href="emprunts/index.html" class="green-button">Gestion des Emprunts</a>
+        </div>
+        <div>
+            <a href="relances/index.html" class="green-button">Gestion des Relances</a>
+        </div>
+        <div>
+            <a href="amendes/index.html" class="green-button">Gestion des Amendes</a>
+        </div>
+        <div>
+            <a href="reservations/index.html" class="green-button">Gestion des Réservations</a>
+        </div>
+        <div>
+            <a href="notifications/notifications.php" class="green-button">Notifications </a>
+        </div>
+        <div>
+            <a href="../index.html" class="green-button">Se deconnecter</a>
+        </div>
+    </div>
+</body>
+</html>

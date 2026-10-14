@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+     <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../assets/img/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+}
+
+.frame {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #cccccc;
+    padding: 40px; /* Augmentation de la taille du cadre */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #28a745; /* Boutons verts */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="frame">
+            <h1>Bienvenue chers Directeur</h1>
+           
+            <div class="buttons">
+                <button onclick="window.location.href='connexion-directeur.html'">Se connecter</button>
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

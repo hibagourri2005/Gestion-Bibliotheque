@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'inscrire</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: url('../assets/img/img5.jpg') no-repeat center center fixed; /* Ajoutez votre image d'arrière-plan ici */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond avec transparence */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px; /* Ajustez cette valeur pour élargir le cadre */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745; /* Vert */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Vert foncé au survol */
+}
+
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <form action="inscription.php" method="POST">
+            <h2>S'inscrire</h2>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="type_utilisateur">Type d'utilisateur:</label>
+            <select id="type_utilisateur" name="type_utilisateur" required>
+                <option value="occasionnel">Occasionnel</option>
+                <option value="abonné">Abonné</option>
+                <option value="abonné_privilégié">Abonné Privilégié</option>
+            </select>
+            <label for="mot_de_passe">Mot de passe:</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            <button type="submit">S'inscrire</button> <br><br>
+            <button onclick="window.location.href='../index.html'">Se deconnecter</button>
+        </form>
+    </div>
+</body>
+</html>

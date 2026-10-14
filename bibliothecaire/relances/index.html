@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Actions</title>
+   <style>
+        
+      
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('../../assets/img/img9.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .button-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Cadre transparent */
+            border: 2px solid rgba(204, 204, 204, 0.5); /* Bordure transparente */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .green-button {
+            background-color:  #4CAF50 ; /* Vert */
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 300px; /* Largeur fixe pour les boutons */
+            height: 50px; /* Hauteur fixe pour les boutons */
+        }
+
+        .green-button:hover {
+            background-color: #45a049; /* Vert foncé */
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="green-button" onclick="location.href='gerer-relances-en-retard.php'">Gerer les relances en retard</button> <br><br>
+        <button class="green-button" onclick="location.href='consulter-relance.php'">Consulter une relance</button> <br><br>
+           <button class="green-button" onclick="location.href='enregistrer-relance.php'">enregister une relance</button> <br><br>
+
+        <button class="green-button" onclick="location.href='notifier-relance.php'">notifier une relance</button> <br><br>
+        <button class="green-button" onclick="location.href='suivi-relances.php'">suivi des relances</button> <br><br>
+
+
+        <button class="green-button" onclick="window.location.href='../index.html'">Retourner</button>
+        <button class="green-button" onclick="window.location.href='../../index.html'">Se deconnecter</button>
+    </div>
+</body>
+</html>

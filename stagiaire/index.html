@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Actions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('../assets/img/img9.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Cadre transparent */
+            border: 2px solid rgba(204, 204, 204, 0.5); /* Bordure transparente */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button-wrapper {
+            flex: 1 1 45%; /* Takes up roughly 45% of container width */
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        
+        .green-button {
+            background-color: #4CAF50; /* Vert */
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Full width within its flex container */
+        }
+        
+        .green-button:hover {
+            background-color: #45a049; /* Vert foncé */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='consulter-utilisateur.php'">Consulter un utilisateur</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='lister-utilisateurs.php'">Lister les utilisateurs</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='#'">Vérifier les utilisateurs suspendus</button>
+        </div>
+       
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='modifier-emprunt.php'">Modifier un emprunt</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='consulter-emprunt.php'">Consulter un emprunt</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='retourner-exemplaire.php'">Retourner un document</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='#'">Gérer le statut de l'emprunt</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="location.href='lister-bibliothecaires.php'">Lister les bibliothécaires</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="green-button" onclick="window.location.href='../index.html'">Se déconnecter</button>
+        </div>
+    </div>
+</body>
+</html>

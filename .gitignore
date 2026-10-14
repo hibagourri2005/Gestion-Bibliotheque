@@ -1,0 +1,26 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers locaux / sensibles
+.env
+config/config.local.php
+*.log
+
+# Dépendances / temporaires
+node_modules/
+vendor/
+*.tmp
+*.bak
+
+# Sauvegardes de base de données (garder uniquement database/bibliotheque.sql)
+database/*.sql.bak
+database/dump-*.sql
